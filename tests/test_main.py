@@ -24,7 +24,7 @@ class test_cases(object):
         self.passed_tests = 0
         self.total_tests = 0
         
-    def tests(self): #change this for more tests
+    def tests(self): #add tests here
         self.test(selection_sort, solved_selection_sort, [1, 3, 2])
         self.test(selection_sort, solved_selection_sort, [1, 2, 3])
         self.test(selection_sort, solved_selection_sort, [3, 2, 1])
