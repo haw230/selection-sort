@@ -25,6 +25,11 @@ class test_cases(object):
     def __init__(self):
         self.passed_tests = 0
         self.total_tests = 0
+        
+    def tests(self): #add tests here
+        self.test(selection_sort, solved_selection_sort, [1, 3, 2])
+        self.test(selection_sort, solved_selection_sort, [1, 2, 3])
+        self.test(selection_sort, solved_selection_sort, [3, 2, 1])
     
     def test(self, func1, func2, ls):
         ls1 = list(ls)
@@ -44,13 +49,7 @@ class test_cases(object):
         if(self.passed_tests == self.total_tests):
             print(aethetics.GREEN + 'All ' + str(self.total_tests) + ' tests passed.' + aethetics.END)
         else:
-            print(aethetics.WARNING + 'Passed ' +  str(self.passed_tests) + ' of ' + str(self.total_tests) + ' tests.' + aethetics.END)
-    
-    def tests(self):
-        self.test(selection_sort, solved_selection_sort, [1, 3, 2])
-        self.test(selection_sort, solved_selection_sort, [1, 2, 3])
-        self.test(selection_sort, solved_selection_sort, [3, 2, 1])
-    
+            print(aethetics.WARNING + 'Passed ' +  str(self.passed_tests) + ' of ' + str(self.total_tests) + ' tests.' + aethetics.END)    
 
 if __name__ == '__main__':
     print('\n' + aethetics.GREEN + "Running Tests..."  + '\n' + aethetics.END)
